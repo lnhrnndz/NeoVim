@@ -23,10 +23,14 @@ local options = {
 	swapfile = false,
 	undofile = true,
 	hidden = true,
-  updatetime = 300,
-  mouse = "a",
+	updatetime = 300,
+	mouse = "a",
+	cmdheight = 2,                           -- more space in the neovim command line for displaying messages
+	writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 }
 
 for k, v in pairs(options) do
-	vim.opt[k] = v
+  vim.opt[k] = v
 end
+
+vim.cmd [[set iskeyword+=_]]
