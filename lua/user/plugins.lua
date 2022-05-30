@@ -48,4 +48,13 @@ return require('packer').startup(function()
   -- Git
   use 'tpope/vim-fugitive'
   use 'airblade/vim-gitgutter'
+  -- cmp
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'saadparwaiz1/cmp_luasnip'
+  ---- snippets
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
 end)

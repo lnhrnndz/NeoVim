@@ -2,7 +2,7 @@ vim.cmd [[
   augroup _general_settings
     autocmd!
     autocmd BufWinEnter * :set formatoptions-=cro
-    autocmd FileType qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+    autocmd FileType fugitive,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
   augroup end
 
   " hybrid relative line numbers

@@ -90,10 +90,12 @@ keymap("n", "!", ":! ", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- PLUGINS
+-- NerdTree
 keymap("n", "<leader>n", ":NERDTreeToggle<CR>", opts)
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gp", ":Git push<CR>", opts)
+-- VimWiki
 
 -- SCRIPTS AND SUCH
 keymap("n", "<leader>s", ":! shellcheck %<CR>", opts)
