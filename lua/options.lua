@@ -2,8 +2,8 @@ local options = {
 	encoding = "utf-8",
 	title = true,
 	tabstop = 2,
-	softtabstop = 4,
-	shiftwidth = 4,
+	softtabstop = 2,
+	shiftwidth = 2,
 	expandtab = true,
 	smartindent = true,
 	errorbells = false,
@@ -23,7 +23,8 @@ local options = {
 	swapfile = false,
 	undofile = true,
 	hidden = true,
-  updatetime = 300
+  updatetime = 300,
+  mouse = "a",
 }
 
 for k, v in pairs(options) do
