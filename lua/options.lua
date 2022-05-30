@@ -30,6 +30,3 @@ local options = {
 for k, v in pairs(options) do
 	vim.opt[k] = v
 end
-
--- Disable automatic comenting on newline
-vim.cmd [[autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o]]
