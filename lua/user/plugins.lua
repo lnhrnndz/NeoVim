@@ -44,6 +44,11 @@ return require('packer').startup(function()
 	-- Colorschemes
 	use 'lnhrnndz/xresources-nvim'
 	use 'lunarvim/darkplus.nvim'
+	-- statusline
+	use {
+		'nvim-lualine/lualine.nvim',
+			requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	}
 	-- File explorer
 	use 'preservim/nerdtree'
 	-- Git
@@ -62,9 +67,16 @@ return require('packer').startup(function()
 	-- LSP
 	use 'neovim/nvim-lspconfig'
 	use 'williamboman/nvim-lsp-installer'
-	
+	-- highlighting
 	use 'RRethy/vim-illuminate'
 	
 	-- C#
 	-- use 'OmniSharp/omnisharp-vim'
+	-- markdown
+	use 'vimwiki/vimwiki'
+	use {
+    "iamcco/markdown-preview.nvim",
+    run = "cd app && npm install",
+    ft = "markdown",
+  }
 end)
