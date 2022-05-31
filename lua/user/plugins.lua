@@ -43,22 +43,28 @@ return require('packer').startup(function()
 	use "wbthomason/packer.nvim" -- Have packer manage itself
 	-- Colorschemes
 	use 'lnhrnndz/xresources-nvim'
+	use 'lunarvim/darkplus.nvim'
 	-- File explorer
 	use 'preservim/nerdtree'
-  -- Git
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
-  -- cmp
-  use 'hrsh7th/nvim-cmp'
-  use 'hrsh7th/cmp-buffer'
-  use 'hrsh7th/cmp-path'
-  use 'hrsh7th/cmp-cmdline'
-  use 'hrsh7th/cmp-nvim-lsp'
-  use 'saadparwaiz1/cmp_luasnip'
-  -- snippets
-  use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+	-- Git
+	use 'tpope/vim-fugitive'
+	use 'airblade/vim-gitgutter'
+	-- cmp
+	use 'hrsh7th/nvim-cmp'
+	use 'hrsh7th/cmp-buffer'
+	use 'hrsh7th/cmp-path'
+	use 'hrsh7th/cmp-cmdline'
+	use 'hrsh7th/cmp-nvim-lsp'
+	use 'saadparwaiz1/cmp_luasnip'
+	-- snippets
+	use 'L3MON4D3/LuaSnip'
+	use 'rafamadriz/friendly-snippets'
+	-- LSP
+	use 'neovim/nvim-lspconfig'
+	use 'williamboman/nvim-lsp-installer'
+	
+	use 'RRethy/vim-illuminate'
+	
+	-- C#
+	-- use 'OmniSharp/omnisharp-vim'
 end)

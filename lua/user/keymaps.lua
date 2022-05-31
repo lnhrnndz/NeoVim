@@ -91,7 +91,7 @@ keymap("n", "!", ":! ", opts)
 
 -- PLUGINS
 -- NerdTree
-keymap("n", "<leader>n", ":NERDTreeToggle<CR>", opts)
+keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gp", ":Git push<CR>", opts)
