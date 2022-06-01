@@ -25,7 +25,6 @@ local options = {
 	hidden = true,
 	updatetime = 300,
 	mouse = "a",
-	cmdheight = 2,                           -- more space in the neovim command line for displaying messages
 	writebackup = false,                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 }
 
