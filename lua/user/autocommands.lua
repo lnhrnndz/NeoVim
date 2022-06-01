@@ -13,7 +13,7 @@ vim.cmd [[
     autocmd BufLeave,FocusLost,WinLeave   * if &nu | set nornu | endif
   augroup end
   au CmdLineEnter * set norelativenumber | redraw
-  au CmdlineLeave * if (match("nerdtree",&filetype)) | set relativenumber | redraw | endif
+  au CmdlineLeave * if (match("NvimTree",&filetype)) | set relativenumber | redraw | endif
 
   augroup _markdown
     autocmd!

@@ -51,6 +51,12 @@ return require('packer').startup(function()
 	}
 	-- File explorer
 	use 'preservim/nerdtree'
+  use {
+    'kyazdani42/nvim-tree.lua',
+    requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+    },
+  }
 	-- Git
 	use 'tpope/vim-fugitive'
 	use 'airblade/vim-gitgutter'

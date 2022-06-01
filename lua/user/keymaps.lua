@@ -90,8 +90,8 @@ keymap("n", "!", ":! ", opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 
 -- PLUGINS
--- NerdTree
-keymap("n", "<leader>e", ":NERDTreeToggle<CR>", opts)
+-- File explorer
+keymap("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 -- git
 keymap("n", "<leader>gs", ":G<CR>", opts)
 keymap("n", "<leader>gp", ":Git push<CR>", opts)
