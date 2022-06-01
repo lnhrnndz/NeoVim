@@ -25,6 +25,12 @@ vim.cmd [[
     autocmd FileType gitcommit setlocal wrap
     autocmd FileType gitcommit setlocal spell
   augroup end
+
+  augroup _remember_folds
+    autocmd!
+    autocmd BufWinLeave * mkview
+    autocmd BufWinEnter * silent! loadview
+  augroup END
 ]]
 
 -- Spellcheck for certain files
