@@ -31,6 +31,8 @@ vim.cmd [[
     autocmd BufWinLeave * mkview
     autocmd BufWinEnter * silent! loadview
   augroup END
+
+  autocmd User SneakLeave highlight clear Sneak
 ]]
 
 -- Spellcheck for certain files

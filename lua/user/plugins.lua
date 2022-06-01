@@ -41,6 +41,8 @@ packer.init {
 
 return require('packer').startup(function()
 	use "wbthomason/packer.nvim" -- Have packer manage itself
+
+  use 'justinmk/vim-sneak'
 	-- Colorschemes
 	use 'lnhrnndz/xresources-nvim'
 	use 'lunarvim/darkplus.nvim'
