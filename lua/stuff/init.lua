@@ -1,0 +1,5 @@
+require("stuff.plugins")
+require("stuff.nvim-tree")
+require("stuff.cmp")
+require("stuff.lsp")
+--require("stuff.illuminate")

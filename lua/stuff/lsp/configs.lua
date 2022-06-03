@@ -3,6 +3,10 @@ if not status_ok then
 	return
 end
 
+-- for omnisharp
+local pid = vim.fn.getpid()
+local omnisharp_bin = "/usr/bin/omnisharp"
+
 local lspconfig = require("lspconfig")
 
 local servers = { "jsonls", "sumneko_lua", "csharp_ls", "bashls", "pyright", "clangd" }
@@ -13,10 +17,10 @@ lsp_installer.setup {
 
 for _, server in pairs(servers) do
 	local opts = {
-		on_attach = require("user.lsp.handlers").on_attach,
-		capabilities = require("user.lsp.handlers").capabilities,
+		on_attach = require("stuff.lsp.handlers").on_attach,
+		capabilities = require("stuff.lsp.handlers").capabilities,
 	}
-	local has_custom_opts, server_custom_opts = pcall(require, "user.lsp.settings." .. server)
+	local has_custom_opts, server_custom_opts = pcall(require, "stuff.lsp.settings." .. server)
 	if has_custom_opts then
 	 	opts = vim.tbl_deep_extend("force", server_custom_opts, opts)
 	end
