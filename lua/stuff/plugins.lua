@@ -41,7 +41,6 @@ packer.init {
 
 return require('packer').startup(function()
     use "wbthomason/packer.nvim" -- Have packer manage itself
-    
     use 'justinmk/vim-sneak'
     -- Colorschemes
     --use '~/repos/xresources-nvim'
@@ -80,7 +79,7 @@ return require('packer').startup(function()
     use 'neovim/nvim-lspconfig'
     use 'williamboman/nvim-lsp-installer'
     -- highlighting
-    use 'RRethy/vim-illuminate'
+    --use 'RRethy/vim-illuminate'
     -- C#
     --use 'OmniSharp/omnisharp-vim'
     -- markdown
