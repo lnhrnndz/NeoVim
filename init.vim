@@ -11,15 +11,14 @@ else
     let g:dracula_italic = 0
 endif
 
-"autocmd VimEnter * GitGutter
-"autocmd BufWritePost * GitGutter
-"let g:gitgutter_sign_allow_clobber = 0
-
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:vimwiki_list = [{'path': '~/wikis',
             \'links_space_char': '-',
             \'syntax': 'markdown', 'ext': '.md'}]
 
+
+" OPTIONS "
+" ------- "
 
 set title
 set splitbelow splitright
@@ -47,60 +46,56 @@ set mouse=niv
 set updatetime=300
 set iskeyword-=_
 
-" Disables automatic commenting on newline:
-autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
-" hybrid relative numbers
+" AUTOCOMANDS "
+" ----------- "
+
 set number
-augroup numbertoggle
+augroup hybrid_line_numbers
     autocmd!
     autocmd BufEnter,FocusGained,WinEnter * if &nu | set rnu   | endif
     autocmd BufLeave,FocusLost,WinLeave   * if &nu | set nornu | endif
-augroup END
+augroup end
 au CmdLineEnter * set norelativenumber | redraw
 au CmdlineLeave * if (match("NvimTree",&filetype)) | set relativenumber | redraw | endif
 
+augroup no_auto_comments
+    autocmd!
+    autocmd BufWinEnter * :set formatoptions-=cro
+augroup end
+
+augroup easyquit
+    autocmd!
+    autocmd FileType fugitive,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+augroup end
+
+augroup spellcheck
+    autocmd!
+    autocmd BufWinEnter *.txt, *.md, *.tex setlocal spell
+augroup end
+
+augroup markdown
+    autocmd!
+    autocmd FileType markdown setlocal wrap
+augroup end
+
+augroup git
+    autocmd!
+    autocmd FileType gitcommit setlocal wrap
+    autocmd FileType gitcommit setlocal spell
+augroup end
+
+augroup remember_folds
+    autocmd!
+    autocmd BufWinLeave * mkview
+    autocmd BufWinEnter * silent! loadview
+augroup end
+
+"autocmd User SneakLeave highlight clear Sneak
 
 
-"" statusline
-"function! GitBranch()
-"    return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
-"endfunction
-"function! StatuslineGit()
-"    let l:branchname = GitBranch()
-"    return strlen(l:branchname) > 0?' '.l:branchname.' ':''
-"endfunction
-"
-"let g:modeMap={
-"            \ 'n'      : 'NORMAL',
-"            \ 'i'      : 'INSERT',
-"            \ 'R'      : 'REPLACE',
-"            \ 'v'      : 'VISUAL',
-"            \ 'V'      : 'VISUAL LINE',
-"            \ "\<C-V>" : 'VISUAL BLOCK',
-"            \ 'c'      : 'COMMAND',
-"            \ 't'      : 'TERMINAL',
-"            \ 's'      : 'SELECT',
-"            \ 'r'      : 'REPLACE'
-"            \}
-"
-"set laststatus=2
-"
-"set statusline=%#TermCursor#
-"set statusline+=%#TermCursor#\ %{g:modeMap[mode()]}\ %#TermCursor#
-"set statusline+=%#DiffChange#%{StatuslineGit()}
-"set statusline+=%#ColorColumn#\ \[%n\]\ %t\ %m%r
-"set statusline+=%=%<
-"set statusline+=\ %y
-"set statusline+=\ %#StatusLine#
-"set statusline+=\ %{&fileencoding?&fileencoding:&encoding}
-"set statusline+=\ \[%{&fileformat}\]
-"set statusline+=\ %#TermCursor#
-"set statusline+=\ %p%%\ %l:%c
-"set statusline+=\ 
-
-
-" KEYMAPS
+" KEYMAPS "
+" ------- "
 
 let mapleader = " "
 
