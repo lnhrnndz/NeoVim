@@ -33,7 +33,7 @@ nvim_tree.setup {
           staged = "S",
           unmerged = "",
           renamed = "➜",
-          deleted = "",
+          deleted = "D",
           untracked = "U",
           ignored = "◌",
         },
