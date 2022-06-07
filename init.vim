@@ -71,13 +71,17 @@ augroup end
 
 augroup spellcheck
     autocmd!
-    autocmd BufWinEnter *.txt, *.md, *.tex setlocal spell
+    autocmd BufWinEnter *.md setlocal spell
+    autocmd BufWinEnter *.txt setlocal spell
+    autocmd BufWinEnter *.tex setlocal spell
 augroup end
 
-augroup markdown
-    autocmd!
-    autocmd FileType markdown setlocal wrap
-augroup end
+"augroup wrapping
+"    autocmd!
+"    autocmd FileType markdown setlocal wrap
+"    autocmd FileType text setlocal wrap
+"    autocmd FileType latex setlocal wrap
+"augroup end
 
 augroup git
     autocmd!
@@ -100,7 +104,11 @@ augroup end
 let mapleader = " "
 
 inoremap kj <Esc>
+"nnoremap j gj
+"nnoremap k gk
+
 nnoremap ! :! 
+
 
 " NAVIGATION
 
