@@ -3,7 +3,7 @@ local M = {}
 -- TODO: backfill this to template
 M.setup = function()
   local signs = {
-    { name = "DiagnosticSignError", text = "x" },
+    { name = "DiagnosticSignError", text = "E" },
     { name = "DiagnosticSignWarn", text = "!" },
     { name = "DiagnosticSignHint", text = "i" },
     { name = "DiagnosticSignInfo", text = "?" },
