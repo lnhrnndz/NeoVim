@@ -45,6 +45,8 @@ set hidden
 set mouse=niv
 set updatetime=300
 "set iskeyword-=_
+set conceallevel=0
+set noshowmode
 
 
 " AUTOCOMANDS "
@@ -56,8 +58,9 @@ augroup hybrid_line_numbers
     autocmd BufEnter,FocusGained,WinEnter * if &nu | set rnu   | endif
     autocmd BufLeave,FocusLost,WinLeave   * if &nu | set nornu | endif
 augroup end
-au CmdLineEnter * set norelativenumber | redraw
-au CmdlineLeave * if (match("NvimTree",&filetype)) | set relativenumber | redraw | endif
+au CmdLineEnter *.* set norelativenumber | redraw
+au CmdlineLeave *.* set relativenumber | redraw
+"au CmdlineLeave * if (match("NvimTree",&filetype)) | set relativenumber | redraw | endif
 
 augroup no_auto_comments
     autocmd!
@@ -95,8 +98,8 @@ augroup end
 
 augroup remember_folds
     autocmd!
-    autocmd BufWinLeave * mkview
-    autocmd BufWinEnter * silent! loadview
+    autocmd BufWinLeave plugins.lua mkview
+    autocmd BufWinEnter plugins.lua silent! loadview
 augroup end
 
 "autocmd User SneakLeave highlight clear Sneak
