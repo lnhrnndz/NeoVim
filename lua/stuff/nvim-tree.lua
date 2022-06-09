@@ -23,30 +23,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 })
 
 nvim_tree.setup {
-  renderer = {
-    icons = {
-      glyphs = {
-        default = "",
-        symlink = "",
-        git = {
-          unstaged = "",
-          staged = "S",
-          unmerged = "",
-          renamed = "➜",
-          deleted = "D",
-          untracked = "U",
-          ignored = "◌",
-        },
-        folder = {
-          default = "",
-          open = "",
-          empty = "",
-          empty_open = "",
-          symlink = "",
-        },
-      }
-    }
-  },
   disable_netrw = true,
   hijack_netrw = true,
   open_on_setup = false,
@@ -113,7 +89,6 @@ nvim_tree.setup {
       },
     },
   },
-
 --  unknown options as of 22.05
 --
 --  update_to_buf_dir = {
@@ -123,5 +98,29 @@ nvim_tree.setup {
 --  auto_resize = true,
 --  git_hl = 1,
 --  root_folder_modifier = ":t",
-
+  renderer = {
+    icons = {
+      git_placement = "after",
+      glyphs = {
+        default = "",
+        symlink = "",
+        git = {
+          unstaged = "U",
+          staged = "A",
+          unmerged = "",
+          renamed = "➜",
+          deleted = "D",
+          untracked = "U",
+          ignored = "◌",
+        },
+        folder = {
+          default = "",
+          open = "",
+          empty = "",
+          empty_open = "",
+          symlink = "",
+        },
+      }
+    }
+  },
 }

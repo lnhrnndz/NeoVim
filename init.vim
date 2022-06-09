@@ -165,6 +165,11 @@ nmap <silent> <leader>gp :Git push<CR>
 nmap <silent> <leader>gl :diffget //3<CR>
 nmap <silent> <leader>gh :diffget //2<CR>
 nmap <silent> <leader>gc :GCheckout<CR>
+" telescope
+nnoremap <leader>ff <cmd>Telescope find_files<cr>
+nnoremap <leader>fg <cmd>Telescope live_grep<cr>
+nnoremap <leader>fb <cmd>Telescope buffers<cr>
+nnoremap <leader>fh <cmd>Telescope help_tags<cr>
 
 
 " MISC
