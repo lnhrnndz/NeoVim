@@ -1,5 +1,6 @@
 require("stuff.plugins")
 require("stuff.lualine")
+require("stuff.bufferline")
 require("stuff.nvim-tree")
 require("stuff.cmp")
 require("stuff.lsp")
