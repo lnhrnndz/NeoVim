@@ -105,13 +105,13 @@ nvim_tree.setup {
         default = "",
         symlink = "",
         git = {
-          unstaged = "U",
+          unstaged = "M",
           staged = "A",
           unmerged = "",
           renamed = "➜",
           deleted = "D",
           untracked = "U",
-          ignored = "◌",
+          ignored = "i",
         },
         folder = {
           default = "",
