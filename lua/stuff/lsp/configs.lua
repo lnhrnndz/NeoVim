@@ -9,7 +9,16 @@ local omnisharp_bin = "/usr/bin/omnisharp"
 
 local lspconfig = require("lspconfig")
 
-local servers = { "jsonls", "sumneko_lua", "csharp_ls", "bashls", "pyright", "clangd", "html", "cssls" }
+local servers = {
+    "jsonls",
+    "sumneko_lua",
+    --"csharp_ls",
+    "bashls",
+    "pyright",
+    "clangd",
+    "html",
+    "cssls"
+}
 
 lsp_installer.setup {
 	ensure_installed = servers
