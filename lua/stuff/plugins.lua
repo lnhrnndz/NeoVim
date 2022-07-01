@@ -69,6 +69,11 @@ return require('packer').startup(function()
 
     use 'williamboman/nvim-lsp-installer'
 
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = ':TSUpdate'
+    }
+
     use 'vimwiki/vimwiki'
     use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", ft = "markdown", }
 
