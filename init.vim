@@ -98,8 +98,8 @@ augroup end
 
 augroup remember_folds
     autocmd!
-    autocmd BufWinLeave plugins.lua mkview
-    autocmd BufWinEnter plugins.lua silent! loadview
+    autocmd BufWinLeave *.* mkview
+    autocmd BufWinEnter *.* silent! loadview
 augroup end
 
 "autocmd User SneakLeave highlight clear Sneak
