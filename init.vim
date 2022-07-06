@@ -146,12 +146,12 @@ inoremap <silent> <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <A-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <A-k> :m '<-2<CR>gv=gv
 " move text left or right
-nnoremap <A-h> <<4h
+nnoremap <A-h> 4h<<
 nnoremap <A-l> >>4l
-inoremap <A-h> <Esc><<3hi
-inoremap <A-l> <Esc>>>5li
-vnoremap <A-h> <4hV
-vnoremap <A-l> >4lV
+inoremap <A-h> <Esc>4h<<a
+inoremap <A-l> <Esc>>>4la
+vnoremap <A-h> <4<left>gv
+vnoremap <A-l> >4<right>gv
 " search and replace
 nnoremap <leader>r :%s//gc<Left><Left><Left>
 nnoremap <leader>R :s//gc<Left><Left><Left>
