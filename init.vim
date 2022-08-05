@@ -178,6 +178,11 @@ nnoremap <leader>ff <cmd>Telescope find_files<cr>
 nnoremap <leader>fg <cmd>Telescope live_grep<cr>
 nnoremap <leader>fb <cmd>Telescope buffers<cr>
 nnoremap <leader>fh <cmd>Telescope help_tags<cr>
+nnoremap <leader><leader>ff <cmd>Telescope find_files hidden=true<cr>
+nnoremap <leader><leader>fg <cmd>Telescope live_grep hidden=true<cr>
+nnoremap <leader><leader>fb <cmd>Telescope buffers hidden=true<cr>
+nnoremap <leader><leader>fh <cmd>Telescope help_tags hidden=true<cr>
+nnoremap <leader>tg :Telescope git
 
 
 " MISC
