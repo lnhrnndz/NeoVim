@@ -33,25 +33,27 @@ return require('packer').startup(function()
 
     use {
         "startup-nvim/startup.nvim",
-        requires = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
         config = function()
             require"startup".setup()
         end
     }
 
+    use 'tpope/vim-obsession'
+
     use 'justinmk/vim-sneak'
 
-    use '~/repos/xresources-nvim'
-    --use 'lnhrnndz/xresources-nvim'
+    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+
+    use 'lnhrnndz/xresources-nvim'
     use 'lunarvim/darkplus.nvim'
     use 'morhetz/gruvbox'
 
     use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
-    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim'}
+    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
     use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    --use { '~/repos/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
+    use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
     use 'moll/vim-bbye'
 
     use 'tpope/vim-fugitive'
@@ -69,18 +71,12 @@ return require('packer').startup(function()
 
     use 'williamboman/nvim-lsp-installer'
 
-    use {
-        'nvim-treesitter/nvim-treesitter',
-        run = ':TSUpdate'
-    }
+    use 'elkowar/yuck.vim'
 
-    use 'vimwiki/vimwiki'
-    use { "iamcco/markdown-preview.nvim", run = "cd app && npm install", ft = "markdown", }
+
+    use 'jakewvincent/mkdnflow.nvim'
+    use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', ft = 'markdown' }
+
 
     use 'ap/vim-css-color'
-
-    -- C#
-    --use 'OmniSharp/omnisharp-vim'
-
-    --use "github/copilot.vim"
 end)
