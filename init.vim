@@ -188,8 +188,9 @@ nnoremap <leader>mo :set mouse= <cr>
 nnoremap <leader>mn :set mouse=n<cr>
 nnoremap <leader>ma :set mouse=a<cr>
 
-inoremap [<CR> [<CR><BS>]<Esc>O
-inoremap (<CR> (<CR><BS>)<Esc>O
-inoremap {<CR> {<CR><BS>}<Esc>O
+" discount auto pairs
+"inoremap [<CR> [<CR><BS>]<Esc>O
+"inoremap (<CR> (<CR><BS>)<Esc>O
+"inoremap {<CR> {<CR><BS>}<Esc>O
 
 "nnoremap <leader>c :so $VIMRUNTIME/syntax/hitest.vim<CR>
