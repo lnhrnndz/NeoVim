@@ -97,6 +97,10 @@ augroup html
     autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
+augroup luaa
+    autocmd FileType lua setlocal tabstop=2 softtabstop=2 shiftwidth=2
+augroup end
+
 augroup remember_folds
     autocmd!
     autocmd BufWinLeave *.* mkview
