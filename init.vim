@@ -76,7 +76,7 @@ augroup end
 augroup spellcheck
     autocmd!
     autocmd BufWinEnter *.md setlocal spell
-    autocmd BufWinEnter *.txt setlocal spell
+    "autocmd BufWinEnter *.txt setlocal spell
     autocmd BufWinEnter *.tex setlocal spell
 augroup end
 
