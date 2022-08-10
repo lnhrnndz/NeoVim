@@ -82,10 +82,11 @@ bufferline.setup {
         --    guibg = { attribute = "bg", highlight = "TabLine" },
         --},
 
-        --buffer_selected = {
-        --  guifg = {attribute='fg',highlight='#ff0000'},
-        --  guibg = {attribute='bg',highlight='#StatusLine'},
-        --},
+        buffer_selected = {
+            gui = "bold",
+            --guifg = { attribute='fg', highlight='#ff0000' },
+            --guibg = { attribute='bg', highlight='#StatusLine' },
+        },
         --buffer_visible = {
         --    guifg = { attribute = "fg", highlight = "Normal" },
         --    guibg = { attribute = "bg", highlight = "Normal" },

@@ -7,7 +7,6 @@ colorscheme xresources
 " special rules when in tmux session
 if (empty($TMUX))
     let g:dracula_italic = 1
-    lua require("stuff.bufferline")
 else
     let g:dracula_italic = 0
 endif
