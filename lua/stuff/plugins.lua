@@ -53,7 +53,7 @@ return require('packer').startup(function()
   use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
   use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
   use 'moll/vim-bbye'
 
   use 'tpope/vim-fugitive'
