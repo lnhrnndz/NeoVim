@@ -7,7 +7,7 @@ end
 
 require('mkdnflow').setup({
   filetypes = {md = true, rmd = true, markdown = true},
-  create_dirs = true,
+  create_dirs = false,
   perspective = {
     priority = 'root',
     fallback = 'current',
