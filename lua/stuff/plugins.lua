@@ -29,54 +29,54 @@ packer.init {
 
 
 return require('packer').startup(function()
-    use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "wbthomason/packer.nvim" -- Have packer manage itself
 
-    use {
-        "startup-nvim/startup.nvim",
-        requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
-        config = function()
-            require"startup".setup()
-        end
-    }
+  use {
+    "startup-nvim/startup.nvim",
+    requires = { "nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim" },
+    config = function()
+      require("startup").setup()
+    end
+  }
 
-    use 'tpope/vim-obsession'
+  use 'tpope/vim-obsession'
 
-    use 'justinmk/vim-sneak'
+  use 'justinmk/vim-sneak'
 
-    use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
 
-    use 'lnhrnndz/xresources-nvim'
-    use 'lunarvim/darkplus.nvim'
-    use 'morhetz/gruvbox'
+  use 'lnhrnndz/xresources-nvim'
+  use 'lunarvim/darkplus.nvim'
+  use 'morhetz/gruvbox'
 
-    use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
-    use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
+  use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
-    use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-    use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-    use 'moll/vim-bbye'
+  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  use 'moll/vim-bbye'
 
-    use 'tpope/vim-fugitive'
-    use 'airblade/vim-gitgutter'
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
 
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'hrsh7th/cmp-cmdline'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'saadparwaiz1/cmp_luasnip'
-    use 'L3MON4D3/LuaSnip'
-    use 'rafamadriz/friendly-snippets'
-    use 'neovim/nvim-lspconfig'
+  use 'hrsh7th/nvim-cmp'
+  use 'hrsh7th/cmp-buffer'
+  use 'hrsh7th/cmp-path'
+  use 'hrsh7th/cmp-cmdline'
+  use 'hrsh7th/cmp-nvim-lsp'
+  use 'saadparwaiz1/cmp_luasnip'
+  use 'L3MON4D3/LuaSnip'
+  use 'rafamadriz/friendly-snippets'
+  use 'neovim/nvim-lspconfig'
 
-    use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/nvim-lsp-installer'
 
-    use 'elkowar/yuck.vim'
-
-
-    use 'jakewvincent/mkdnflow.nvim'
-    use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', ft = 'markdown' }
+  use 'elkowar/yuck.vim'
 
 
-    use 'ap/vim-css-color'
+  use 'jakewvincent/mkdnflow.nvim'
+  use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', ft = 'markdown' }
+
+
+  use 'ap/vim-css-color'
 end)

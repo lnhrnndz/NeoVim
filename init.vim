@@ -6,15 +6,15 @@ colorscheme xresources
 
 " special rules when in tmux session
 if (empty($TMUX))
-    let g:dracula_italic = 1
+  let g:dracula_italic = 1
 else
-    let g:dracula_italic = 0
+  let g:dracula_italic = 0
 endif
 
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:vimwiki_list = [{'path': '~/wikis',
-            \'links_space_char': '-',
-            \'syntax': 'markdown', 'ext': '.md'}]
+                      \'links_space_char': '-',
+                      \'syntax': 'markdown', 'ext': '.md'}]
 
 
 " OPTIONS "
@@ -22,8 +22,8 @@ let g:vimwiki_list = [{'path': '~/wikis',
 
 set title
 set splitbelow splitright
-set tabstop=4 softtabstop=4
-set shiftwidth=4
+set tabstop=2 softtabstop=2
+set shiftwidth=2
 set expandtab
 set smartindent
 set visualbell
@@ -54,56 +54,56 @@ set noshowmode
 
 set number
 augroup hybrid_line_numbers
-    autocmd!
-    autocmd BufEnter,FocusGained,WinEnter * if &nu | set rnu   | endif
-    autocmd BufLeave,FocusLost,WinLeave   * if &nu | set nornu | endif
+  autocmd!
+  autocmd BufEnter,FocusGained,WinEnter * if &nu | set rnu   | endif
+  autocmd BufLeave,FocusLost,WinLeave   * if &nu | set nornu | endif
 augroup end
 au CmdLineEnter *.* set norelativenumber | redraw
 au CmdlineLeave *.* set relativenumber | redraw
 "au CmdlineLeave * if (match("NvimTree",&filetype)) | set relativenumber | redraw | endif
 
 augroup no_auto_comments
-    autocmd!
-    autocmd BufWinEnter * :set formatoptions-=cro
+  autocmd!
+  autocmd BufWinEnter * :set formatoptions-=cro
 augroup end
 
 augroup easyquit
-    autocmd!
-    autocmd FileType fugitive,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+  autocmd!
+  autocmd FileType fugitive,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
 augroup end
 
 augroup spellcheck
-    autocmd!
-    autocmd BufWinEnter *.md setlocal spell
-    "autocmd BufWinEnter *.txt setlocal spell
-    autocmd BufWinEnter *.tex setlocal spell
+  autocmd!
+  autocmd BufWinEnter *.md setlocal spell
+  "autocmd BufWinEnter *.txt setlocal spell
+  autocmd BufWinEnter *.tex setlocal spell
 augroup end
 
 "augroup wrapping
-"    autocmd!
-"    autocmd FileType markdown setlocal wrap
-"    autocmd FileType text setlocal wrap
-"    autocmd FileType latex setlocal wrap
+"  autocmd!
+"  autocmd FileType markdown setlocal wrap
+"  autocmd FileType text setlocal wrap
+"  autocmd FileType latex setlocal wrap
 "augroup end
 
 augroup git
-    autocmd!
-    autocmd FileType gitcommit setlocal wrap
-    autocmd FileType gitcommit setlocal spell
+  autocmd!
+  autocmd FileType gitcommit setlocal wrap
+  autocmd FileType gitcommit setlocal spell
 augroup end
 
 augroup html
-    autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
 augroup luaa
-    autocmd FileType lua setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType lua setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
 augroup remember_folds
-    autocmd!
-    autocmd BufWinLeave *.* mkview
-    autocmd BufWinEnter *.* silent! loadview
+  autocmd!
+  autocmd BufWinLeave *.* mkview
+  autocmd BufWinEnter *.* silent! loadview
 augroup end
 
 "autocmd User SneakLeave highlight clear Sneak
@@ -149,12 +149,12 @@ inoremap <silent> <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <A-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <A-k> :m '<-2<CR>gv=gv
 " move text left or right
-nnoremap <A-h> 4h<<
-nnoremap <A-l> >>4l
-inoremap <A-h> <Esc>4h<<a
-inoremap <A-l> <Esc>>>4la
-vnoremap <A-h> <4<left>gv
-vnoremap <A-l> >4<right>gv
+nnoremap <A-h> 2h<<
+nnoremap <A-l> >>2l
+inoremap <A-h> <Esc>2h<<a
+inoremap <A-l> <Esc>>>2la
+vnoremap <A-h> <2<left>gv
+vnoremap <A-l> >2<right>gv
 " search and replace
 nnoremap <leader>r :%s//gc<Left><Left><Left>
 nnoremap <leader>R :s//gc<Left><Left><Left>
