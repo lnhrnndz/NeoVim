@@ -105,6 +105,7 @@ cmp.setup {
         luasnip = "[Snippet]",
         buffer = "[Buffer]",
         path = "[Path]",
+        spell = "[Spell]",
       })[entry.source.name]
       return vim_item
     end,
@@ -133,5 +134,6 @@ cmp.setup {
 
 cmp.setup.filetype('markdown', {
   sources = cmp.config.sources({
+    --{ name = 'spell' },
   })
 })
