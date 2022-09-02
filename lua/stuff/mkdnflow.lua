@@ -32,7 +32,7 @@ require('mkdnflow').setup({
   },
   to_do = {
     symbols = {' ', '-', 'X'},
-    update_parents = true,
+    update_parents = false,
     not_started = ' ',
     in_progress = '-',
     complete = 'X'
