@@ -170,9 +170,12 @@ nmap <silent> <leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <leader>lg :lua _LAZYGIT_TOGGLE()<CR>
 nmap <silent> <leader>gs :G<CR>
 nmap <silent> <leader>gp :Git push<CR>
+nmap <silent> <leader>gl :Git log --branches --graph --pretty=format:'%C(yellow)%h%Creset %s%C(auto)%d'<CR>
+nmap <silent> <leader>gL :Git log --branches --graph --decorate<CR>
+nmap <silent> <leader>gh :GcLog<CR>
 nmap <silent> <leader>gb :Git blame<CR>
-nmap <silent> <leader>gl :diffget //3<CR>
-nmap <silent> <leader>gh :diffget //2<CR>
+"nmap <silent> <leader>gl :diffget //3<CR>
+"nmap <silent> <leader>gh :diffget //2<CR>
 nmap <silent> <leader>gc :GCheckout<CR>
 " telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
