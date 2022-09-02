@@ -70,7 +70,7 @@ augroup end
 
 augroup easyquit
   autocmd!
-  autocmd FileType fugitive,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
+  autocmd FileType git,fugitive,fugitiveblame,qf,help,man,lspinfo nnoremap <silent> <buffer> q :close<CR>
 augroup end
 
 augroup spellcheck
@@ -170,6 +170,7 @@ nmap <silent> <leader>e :NvimTreeToggle<CR>
 nnoremap <silent> <leader>lg :lua _LAZYGIT_TOGGLE()<CR>
 nmap <silent> <leader>gs :G<CR>
 nmap <silent> <leader>gp :Git push<CR>
+nmap <silent> <leader>gb :Git blame<CR>
 nmap <silent> <leader>gl :diffget //3<CR>
 nmap <silent> <leader>gh :diffget //2<CR>
 nmap <silent> <leader>gc :GCheckout<CR>
