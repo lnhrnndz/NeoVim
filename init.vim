@@ -14,7 +14,8 @@ endif
 let $FZF_DEFAULT_OPTS='--reverse'
 let g:vimwiki_list = [{'path': '~/wikis',
                       \'links_space_char': '-',
-                      \'syntax': 'markdown', 'ext': '.md'}]
+                      \'syntax': 'markdown',
+                      \'ext': '.md'}]
 
 
 " OPTIONS "
