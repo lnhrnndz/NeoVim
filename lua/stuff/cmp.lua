@@ -134,6 +134,7 @@ cmp.setup {
 
 cmp.setup.filetype('markdown', {
   sources = cmp.config.sources({
-    --{ name = 'spell' },
+    --{ name = "spell" },
+    { name = "path" },
   })
 })
