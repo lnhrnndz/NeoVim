@@ -44,6 +44,7 @@ return require('packer').startup(function()
   use 'justinmk/vim-sneak'
 
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter-context', requires = 'nvim-treesitter/nvim-treesitter' }
 
   use 'lnhrnndz/xresources-nvim'
   use 'lunarvim/darkplus.nvim'
