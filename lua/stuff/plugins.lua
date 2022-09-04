@@ -29,7 +29,7 @@ packer.init {
 
 
 return require('packer').startup(function()
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+  use "wbthomason/packer.nvim"
 
   use {
     "startup-nvim/startup.nvim",
@@ -40,26 +40,27 @@ return require('packer').startup(function()
   }
 
   use 'tpope/vim-obsession'
-
+  use 'moll/vim-bbye'
   use 'justinmk/vim-sneak'
 
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'nvim-treesitter/nvim-treesitter-context', requires = 'nvim-treesitter/nvim-treesitter' }
+  -- UI
+  use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
 
+  -- explorer / fuzzy finder
+  use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
+  use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
+
+  -- colorschemes
   use 'lnhrnndz/xresources-nvim'
   use 'lunarvim/darkplus.nvim'
   use 'morhetz/gruvbox'
 
-  use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
-  use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
+  -- highlighting
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter-context', requires = 'nvim-treesitter/nvim-treesitter' }
 
-  use { 'nvim-lualine/lualine.nvim', requires = { 'kyazdani42/nvim-web-devicons', opt = true } }
-  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
-  use 'moll/vim-bbye'
-
-  use 'tpope/vim-fugitive'
-  use 'airblade/vim-gitgutter'
-
+  -- completion
   use 'hrsh7th/nvim-cmp'
   use 'hrsh7th/cmp-buffer'
   use 'hrsh7th/cmp-path'
@@ -70,16 +71,20 @@ return require('packer').startup(function()
   use 'saadparwaiz1/cmp_luasnip'
   use 'L3MON4D3/LuaSnip'
   use 'rafamadriz/friendly-snippets'
-  use 'neovim/nvim-lspconfig'
 
+  -- LSP
+  use 'neovim/nvim-lspconfig'
   use 'williamboman/nvim-lsp-installer'
 
+  -- git
+  use 'tpope/vim-fugitive'
+  use 'airblade/vim-gitgutter'
+
+  -- language specific
+  use 'ap/vim-css-color'
   use 'elkowar/yuck.vim'
 
-
+  -- markdown
   use 'jakewvincent/mkdnflow.nvim'
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', ft = 'markdown' }
-
-
-  use 'ap/vim-css-color'
 end)
