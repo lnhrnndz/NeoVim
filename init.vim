@@ -181,6 +181,8 @@ nmap <silent> <leader>gl :Git log --branches --graph --pretty=format:'%C(yellow)
 nmap <silent> <leader>gL :Git log --branches --graph --decorate<CR>
 nmap <silent> <leader>gh :GcLog<CR>
 nmap <silent> <leader>gb :Git blame<CR>
+nmap <silent> <leader>gd :Git difftool<CR>
+nmap <silent> <leader>gm :Git mergetool<CR>
 "nmap <silent> <leader>gl :diffget //3<CR>
 "nmap <silent> <leader>gh :diffget //2<CR>
 nmap <silent> <leader>gc :GCheckout<CR>
