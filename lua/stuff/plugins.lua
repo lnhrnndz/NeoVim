@@ -51,14 +51,15 @@ return require('packer').startup(function()
   use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
   use { 'nvim-telescope/telescope.nvim', requires = 'nvim-lua/plenary.nvim' }
 
+  -- highlighting
+  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
+  use { 'nvim-treesitter/nvim-treesitter-context', requires = 'nvim-treesitter/nvim-treesitter' }
+
   -- colorschemes
   use 'lnhrnndz/xresources-nvim'
   use 'lunarvim/darkplus.nvim'
   use 'morhetz/gruvbox'
-
-  -- highlighting
-  use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'nvim-treesitter/nvim-treesitter-context', requires = 'nvim-treesitter/nvim-treesitter' }
+  use { 'dracula/vim', as = 'dracula' }
 
   -- completion
   use 'hrsh7th/nvim-cmp'
