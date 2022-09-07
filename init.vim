@@ -208,6 +208,8 @@ nnoremap <leader>mo :set mouse= <cr>
 nnoremap <leader>mn :set mouse=n<cr>
 nnoremap <leader>ma :set mouse=a<cr>
 
+noremap <F4> :set hlsearch! hlsearch?<CR>
+
 " discount auto pairs
 "inoremap [<CR> [<CR><BS>]<Esc>O
 "inoremap (<CR> (<CR><BS>)<Esc>O
