@@ -202,8 +202,8 @@ nnoremap <leader>tg :Telescope git
 
 nnoremap <leader><leader><leader><leader> :set scrolloff=
 
-nnoremap <leader>s :! shellcheck %<CR>
-nnoremap <leader>S :vsplit<CR>:terminal shellcheck %<CR>
+nnoremap <leader>sc :! shellcheck %<CR>
+nnoremap <leader>sC :vsplit<CR>:terminal shellcheck %<CR>
 
 nnoremap <leader>mm :set mouse? <cr>
 nnoremap <leader>mo :set mouse= <cr>
@@ -211,6 +211,9 @@ nnoremap <leader>mn :set mouse=n<cr>
 nnoremap <leader>ma :set mouse=a<cr>
 
 noremap <F4> :set hlsearch! hlsearch?<CR>
+
+nnoremap <leader>s :setlocal spell!<CR>
+nnoremap <leader>sp :setlocal spell!<CR>
 
 " discount auto pairs
 "inoremap [<CR> [<CR><BS>]<Esc>O
