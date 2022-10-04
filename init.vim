@@ -11,13 +11,6 @@ else
   let g:dracula_italic = 0
 endif
 
-let $FZF_DEFAULT_OPTS='--reverse'
-let g:vimwiki_list = [{'path': '~/wikis',
-                      \'links_space_char': '-',
-                      \'syntax': 'markdown',
-                      \'ext': '.md'}]
-
-
 " OPTIONS "
 " ------- "
 
@@ -91,14 +84,6 @@ augroup git
   autocmd!
   autocmd FileType gitcommit setlocal wrap
   autocmd FileType gitcommit setlocal spell
-augroup end
-
-augroup html
-  autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
-augroup end
-
-augroup luaa
-  autocmd FileType lua setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
 augroup remember_folds
@@ -196,7 +181,8 @@ nnoremap <leader><leader>fg <cmd>Telescope live_grep hidden=true<cr>
 nnoremap <leader><leader>fb <cmd>Telescope buffers hidden=true<cr>
 nnoremap <leader><leader>fh <cmd>Telescope help_tags hidden=true<cr>
 nnoremap <leader>tg :Telescope git
-
+" mkdmflow
+nnoremap <leader>ft :MkdnTableFormat<CR>
 
 " MISC
 
