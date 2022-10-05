@@ -107,6 +107,7 @@ cmp.setup {
         buffer = "[Buffer]",
         path = "[Path]",
         spell = "[Spell]",
+        cmp_tabnine = "[tab9]",
       })[entry.source.name]
       return vim_item
     end,
@@ -117,6 +118,7 @@ cmp.setup {
     { name = "luasnip" },
     { name = "path" },
     { name = "buffer", keyword_length = 4 },
+    { name = "cmp_tabnine" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
