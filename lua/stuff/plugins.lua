@@ -58,8 +58,13 @@ return require('packer').startup(function()
   -- colorschemes
   use 'lnhrnndz/xresources-nvim'
   use 'lunarvim/darkplus.nvim'
-  use 'morhetz/gruvbox'
+  --use 'morhetz/gruvbox'
+  use 'ellisonleao/gruvbox.nvim'
   use { 'dracula/vim', as = 'dracula' }
+  use 'ayu-theme/ayu-vim'
+  use 'projekt0n/github-nvim-theme'
+  use { "catppuccin/nvim", as = "catppuccin" }
+  use 'folke/tokyonight.nvim'
 
   -- completion
   use 'hrsh7th/nvim-cmp'
