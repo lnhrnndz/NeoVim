@@ -1,4 +1,5 @@
 require("stuff.plugins")
+require("stuff.nvim-web-devicons")
 require("stuff.lualine")
 require("stuff.bufferline")
 require("stuff.nvim-tree")
