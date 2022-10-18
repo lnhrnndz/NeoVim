@@ -78,7 +78,7 @@ return require('packer').startup(function()
   use {'tzachar/cmp-tabnine', run='./install.sh'}
 
   use 'L3MON4D3/LuaSnip'
-  use 'rafamadriz/friendly-snippets'
+  use { 'lnhrnndz/friendly-snippets', branch='personal' }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
