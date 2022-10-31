@@ -87,10 +87,10 @@ bufferline.setup {
       --guifg = { attribute='fg', highlight='#ff0000' },
       --guibg = { attribute='bg', highlight='#StatusLine' },
     },
-    --buffer_visible = {
-    --  guifg = { attribute = "fg", highlight = "Normal" },
-    --  guibg = { attribute = "bg", highlight = "Normal" },
-    --},
+    buffer_visible = {
+      guifg = { attribute = "fg", highlight = "Normal" },
+      guibg = { attribute = "bg", highlight = "Normal" },
+    },
 
     --close_button = {
     --  guifg = { attribute = "fg", highlight = "TabLine" },
