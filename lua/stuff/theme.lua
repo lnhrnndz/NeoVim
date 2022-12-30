@@ -1,4 +1,9 @@
-require("gruvbox").setup({
+local status_ok, gruvbox = pcall(require, "gruvbox")
+if not status_ok then
+  return
+end
+
+gruvbox.setup({
   overrides = {
     Normal = {bg = "#0E1018"},
     VertSplit = {bg = '#0E1018'},
@@ -35,6 +40,7 @@ require("gruvbox").setup({
     GruvboxRedSign = {fg = "#fb4934", bg = "#0E1018"},
     GruvboxBlueSign = {fg = "#83a598", bg = "#0E1018"},
     WilderMenu = {fg = "#ebdbb2", bg = "#0E1018"},
-    WilderAccent = {fg = "#f4468f", bg = "#0E1018"}
+    WilderAccent = {fg = "#f4468f", bg = "#0E1018"},
+    Wildmenu = {bg = "#0E1020"},
   }
 })
