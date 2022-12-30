@@ -89,6 +89,7 @@ telescope.setup {
     -- Now the picker_config_key will be applied every time you call this
     -- builtin picker
   },
+  file_ignore_patterns = {".git/"},
   extensions = {
     -- Your extension configuration goes here:
     -- extension_name = {
