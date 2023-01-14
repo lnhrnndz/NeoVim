@@ -2,7 +2,7 @@
 
 lua require("stuff")
 
-colorscheme xresources
+colorscheme github_dark_default
 
 " special rules when in tmux session
 if (empty($TMUX))
