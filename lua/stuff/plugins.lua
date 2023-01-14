@@ -96,6 +96,7 @@ return require('packer').startup(function()
   use 'jakewvincent/mkdnflow.nvim'
   use { 'iamcco/markdown-preview.nvim', run = 'cd app && npm install', ft = 'markdown' }
 
+  -- latex
   use {
     'lervag/vimtex',
     config = function()

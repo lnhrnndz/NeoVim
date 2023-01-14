@@ -5,7 +5,7 @@ end
 
 --vim.cmd('autocmd FileType markdown set autowriteall')
 
-require('mkdnflow').setup({
+mkdnflow.setup({
   filetypes = {md = true, rmd = true, markdown = true},
   create_dirs = false,
   perspective = {
