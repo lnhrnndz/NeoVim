@@ -16,9 +16,9 @@ endif
 
 set title
 set splitbelow splitright
-set tabstop=2 softtabstop=2
-set shiftwidth=2
-set expandtab
+set tabstop=4 softtabstop=4
+set shiftwidth=4
+set noexpandtab
 set smartindent
 set visualbell
 set termguicolors
@@ -90,6 +90,13 @@ augroup remember_folds
   autocmd!
   autocmd BufWinLeave *.* mkview
   autocmd BufWinEnter *.* silent! loadview
+augroup end
+
+augroup expand_tab
+  autocmd!
+  autocmd FileType lua setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType yaml setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
 "autocmd User SneakLeave highlight clear Sneak
