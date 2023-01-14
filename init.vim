@@ -213,4 +213,6 @@ nnoremap <leader>sp :setlocal spell!<CR>
 "inoremap (<CR> (<CR><BS>)<Esc>O
 "inoremap {<CR> {<CR><BS>}<Esc>O
 
-"nnoremap <leader>c :so $VIMRUNTIME/syntax/hitest.vim<CR>
+nnoremap <leader>ch :so $VIMRUNTIME/syntax/hitest.vim<CR>
+
+nnoremap <leader>cb :hi Normal guibg=NONE ctermbg=NONE<CR>:hi SignColumn guibg=NONE ctermbg=NONE<CR>
