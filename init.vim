@@ -4,13 +4,6 @@ lua require("stuff")
 
 colorscheme github_dark_default
 
-" special rules when in tmux session
-if (empty($TMUX))
-  let g:dracula_italic = 1
-else
-  let g:dracula_italic = 0
-endif
-
 " OPTIONS "
 " ------- "
 
