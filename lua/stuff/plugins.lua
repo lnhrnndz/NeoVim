@@ -82,7 +82,8 @@ return require('packer').startup(function()
 
   -- LSP
   use 'neovim/nvim-lspconfig'
-  use 'williamboman/nvim-lsp-installer'
+  --use 'williamboman/nvim-lsp-installer'
+  use 'williamboman/mason.nvim'
 
   -- git
   use 'tpope/vim-fugitive'
