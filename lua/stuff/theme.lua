@@ -48,8 +48,10 @@ end
 local status_ok, github_theme = pcall(require, "github-theme")
 if status_ok then
   github_theme.setup({
-    colors = {
-    },
-    comment_style = "italic",
+    options = {
+      styles = {
+        comments = "italic",
+      }
+    }
   })
 end
