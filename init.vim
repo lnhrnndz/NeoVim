@@ -2,7 +2,7 @@
 
 lua require("stuff")
 
-colorscheme github_dark_high_contrast
+colorscheme ayu
 
 " OPTIONS "
 " ------- "
