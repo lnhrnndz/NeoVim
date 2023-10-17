@@ -84,13 +84,16 @@ cmp.setup {
       return vim_item
     end,
   },
+  completion = {
+    keyword_length = 4
+  },
   sources = {
     { name = "nvim_lsp" },
     { name = "nvim_lua" },
     { name = "luasnip" },
     { name = "path" },
     { name = "buffer", keyword_length = 4 },
-    { name = "cmp_tabnine" },
+    --{ name = "cmp_tabnine" },
   },
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
