@@ -45,7 +45,8 @@ return require('packer').startup(function()
 
   -- UI
   use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
+  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  --use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
 
   -- explorer / fuzzy finder
   use { 'kyazdani42/nvim-tree.lua', requires = 'kyazdani42/nvim-web-devicons' }
@@ -84,6 +85,7 @@ return require('packer').startup(function()
   use 'neovim/nvim-lspconfig'
   --use 'williamboman/nvim-lsp-installer'
   use 'williamboman/mason.nvim'
+  use 'williamboman/mason-lspconfig.nvim'
 
   -- git
   use 'tpope/vim-fugitive'
@@ -102,7 +104,7 @@ return require('packer').startup(function()
     'lervag/vimtex',
     config = function()
       vim.g.tex_flavor = 'latex'
-      vim.g.vimtex_view_method = 'zathura'
+      vim.g.vimtex_view_method = 'general'
       vim.g.vimtex_quickfix_mode = 0
       vim.g.tex_conceal = 'abdmg'
       vim.g.indentLine_setConceal = 0

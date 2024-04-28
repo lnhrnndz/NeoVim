@@ -90,6 +90,7 @@ augroup expand_tab
   autocmd FileType lua setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType yaml setlocal expandtab tabstop=2 softtabstop=2 shiftwidth=2
   autocmd FileType html setlocal tabstop=2 softtabstop=2 shiftwidth=2
+  autocmd FileType tex setlocal tabstop=2 softtabstop=2 shiftwidth=2
 augroup end
 
 "autocmd User SneakLeave highlight clear Sneak

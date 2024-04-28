@@ -73,6 +73,7 @@ bufferline.setup {
     -- end
   },
   highlights = {
+    --[[
     fill = {
       guifg = { attribute = "fg", highlight = "#ff0000" },
       guibg = { attribute = "bg", highlight = "Normal" },
@@ -165,5 +166,6 @@ bufferline.setup {
     --  guifg = { attribute = "fg", highlight = "LspDiagnosticsDefaultHint" },
     --  guibg = { attribute = "bg", highlight = "Normal" },
     --},
+    --]]
   },
 }
