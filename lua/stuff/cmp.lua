@@ -15,6 +15,7 @@ local check_backspace = function()
   return col == 0 or vim.fn.getline("."):sub(col, col):match "%s"
 end
 
+-- TODO: fix icons
 --   פּ ﯟ   some other good icons
 local kind_icons = {
   Text = "",
@@ -45,18 +46,25 @@ local kind_icons = {
 }
 -- find more here: https://www.nerdfonts.com/cheat-sheet
 
+vim.g.cmptoggle = true
+
 cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
     end,
   },
+  enabled = function()
+    return vim.g.cmptoggle
+  end,
   mapping = {
-    ["<C-k>"] = cmp.mapping.select_prev_item(),
-    ["<C-j>"] = cmp.mapping.select_next_item(),
+    --["<C-k>"] = cmp.mapping.select_prev_item(),
+    --["<C-j>"] = cmp.mapping.select_next_item(),
+    ["<C-p>"] = cmp.mapping.select_prev_item(),
+    ["<C-n>"] = cmp.mapping.select_next_item(),
     ["<C-b>"] = cmp.mapping.scroll_docs(-1),
     ["<C-f>"] = cmp.mapping.scroll_docs(1),
-    ["<C-Space>"] = cmp.mapping.complete(),
+    ["<C-s>"] = cmp.mapping.complete(),
     ["<C-y>"] = cmp.mapping.confirm({ select = true }),
     ["<C-e>"] = cmp.mapping {
       i = cmp.mapping.abort(),
@@ -79,7 +87,7 @@ cmp.setup {
         buffer = "[Buffer]",
         path = "[Path]",
         spell = "[Spell]",
-        cmp_tabnine = "[tab9]",
+        --cmp_tabnine = "[tab9]",
       })[entry.source.name]
       return vim_item
     end,
@@ -118,3 +126,5 @@ cmp.setup.filetype('markdown', {
     --{ name = "spell" , keyword_length = 5, max_item_count = 2 },
   })
 })
+
+vim.keymap.set("n", "<leader>tc", "<cmd>lua vim.g.cmptoggle = not vim.g.cmptoggle<CR>", { desc = "toggle nvim-cmp" })

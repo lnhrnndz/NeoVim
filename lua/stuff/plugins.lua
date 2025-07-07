@@ -44,8 +44,8 @@ return require('packer').startup(function()
   use 'justinmk/vim-sneak'
 
   -- UI
-  use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
-  use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  --use { 'nvim-lualine/lualine.nvim', requires = 'kyazdani42/nvim-web-devicons' }
+  --use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons' }
   --use { 'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons', commit = "2e5d92e" }
 
   -- explorer / fuzzy finder
@@ -63,6 +63,7 @@ return require('packer').startup(function()
   use 'ellisonleao/gruvbox.nvim'
   use { 'dracula/vim', as = 'dracula' }
   use 'ayu-theme/ayu-vim'
+  --use 'Shatur/neovim-ayu'
   use 'projekt0n/github-nvim-theme'
   use { "catppuccin/nvim", as = "catppuccin" }
   use 'folke/tokyonight.nvim'
@@ -76,10 +77,12 @@ return require('packer').startup(function()
   use 'hrsh7th/cmp-nvim-lua'
   use 'hrsh7th/cmp-nvim-lsp'
   use 'saadparwaiz1/cmp_luasnip'
-  use {'tzachar/cmp-tabnine', run='./install.sh'}
+  --use {'tzachar/cmp-tabnine', run='./install.sh'}
+
+  --use 'm4xshen/autoclose.nvim'
 
   use 'L3MON4D3/LuaSnip'
-  use { 'lnhrnndz/friendly-snippets', branch='personal' }
+  use { 'rafamadriz/friendly-snippets' }
 
   -- LSP
   use 'neovim/nvim-lspconfig'
@@ -110,4 +113,8 @@ return require('packer').startup(function()
       vim.g.indentLine_setConceal = 0
     end
   }
+
+  -- folding
+  --use 'chrisgrieser/nvim-origami' -- TODO: fix breaking change
+  --use {'kevinhwang91/nvim-ufo', requires = 'kevinhwang91/promise-async'}
 end)
